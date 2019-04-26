@@ -1,0 +1,35 @@
+body{
+	background-color: black;
+	font-family: 'Prompt', sans-serif;
+	margin: 2rem 0;
+}
+
+.card{
+	margin-top: 20px;
+	text-align: center;
+	width: 18rem;
+	margin-top: 30px;
+}
+
+.card-title{
+	font-size: 25px;
+	color: white;
+	margin-bottom: 60px;
+	vertical-align: center;
+}
+
+.card-body{
+	height: 50px;
+}
+
+nav{
+	background-color: #BC0000;
+}
+
+h1{
+	font-size: 60px;
+	color: white;
+	text-align: center;
+	margin-top: 150px;
+}
+

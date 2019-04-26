@@ -1,0 +1,26 @@
+body{
+	background: black;
+	text-align: center;
+	font-family: 'Prompt', sans-serif;
+	color: white;
+
+}
+
+p{
+	text-align: left;
+}
+
+.row{
+	margin-bottom: 40px;
+}
+
+#author_name{
+	font-size: 50px;
+	margin-bottom: 20px;
+	background-color: gray;
+}
+
+#port_title{
+	background-color: gray;
+	font-size: 20px;
+}
