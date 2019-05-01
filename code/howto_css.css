@@ -12,7 +12,7 @@ body {
 }
 
 h3 {
-  background: #7334BD;
+  background: #f72c2c;
 	display: inline-block;
   vertical-align: middle;
   padding: 3px 5px;
@@ -32,7 +32,7 @@ table {
 }
 
 th {
-  background: #081B82;
+  background: #BC0000;
   color: #fafafa;
   font-size: 0.95em;
   padding-top: 10px;
@@ -86,7 +86,7 @@ span.detail {
 }
 
 .button-panel .button {
-  background: #7334BD;
+  background: #BC0000;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -100,5 +100,5 @@ span.detail {
 }
 
 .button:hover {
-  background: #5917A7;
+  background: #7C0400;
 }

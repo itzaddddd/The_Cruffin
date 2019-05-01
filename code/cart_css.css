@@ -12,7 +12,7 @@ table {
 }
 
 th {
-    background: #081B82;
+    background: #BC0000;
     color: #fafafa;
     font-size: 1em;
     padding-top: 10px;
@@ -40,7 +40,7 @@ td {
 }
 
 .button-panel .button {
-    background: #24D10E;
+    background: #BC0000;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -54,7 +54,7 @@ td {
 }
 
 .button:hover {
-    background: #21AA0F;
+    background: #7C0400;
 }
 
 .button-panel-b {
@@ -70,7 +70,7 @@ td {
 }
 
 .button-panel-b .button {
-    background: #30B3C9;
+    background: #BC0000;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -84,7 +84,7 @@ td {
 }
 
 .button-panel-b .button:hover {
-    background: #2C8E9D;
+    background: #7C0400;
 }
 
 .quantity {

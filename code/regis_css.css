@@ -12,7 +12,7 @@ body {
 }
 
 h3 {
-	background: #7334BD;
+	background: #f72c2c;
 	display: inline-block;
   	vertical-align: middle;
   	padding: 3px 5px;
@@ -72,7 +72,7 @@ label {
 }
 
 .button-panel .button {
-  	background: #30B3C9;
+  	background: #BC0000;
   	border: none;
   	color: #fff;
   	cursor: pointer;
@@ -86,5 +86,5 @@ label {
 }
 
 .button:hover {
-  	background: #2C8E9D;
+  	background: #7C0400;
 }

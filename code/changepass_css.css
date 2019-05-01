@@ -41,7 +41,7 @@ form {
 }
 
 .form-item input:focus {
-  	border: 2px solid #30B3C9;
+  	border: 2px solid #7334BD;
   	outline: none;
 }
 
@@ -65,5 +65,5 @@ form {
 }
 
 .button:hover {
-  	background: #2C8E9D;
+  	background: #700E0A;
 }
