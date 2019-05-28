@@ -1,15 +1,24 @@
+@media (max-width: 600px) {
+    article {
+        margin: 0;
+    }
+}
+
 body{
 	background: black;
-	text-align: center;
-	font-family: 'Prompt', sans-serif;
-	color: white;
+}
 
+.form-wrapper-main {
+  background: black;
 }
 
 .product_title{
 	padding: 20px;
 	font-size: 60px;
   margin-top: 50px;
+  text-align: center;
+  font-family: 'Prompt', sans-serif;
+  color:white;
 }
 
 #product_new{
@@ -29,7 +38,6 @@ table{
   border:0;
   border-color:none;
   margin:30px;
-
 }
 
 .product_all td{
@@ -63,11 +71,15 @@ table{
 .b_name{
   text-align: center;
   margin:0px;
+  font-family: 'Prompt', sans-serif;
+  color:white;
 }
 
 .b_price{
   text-align: center;
   margin:0px;
+  font-family: 'Prompt', sans-serif;
+  color:white;
 }
 
 nav{
@@ -166,4 +178,93 @@ button{
   border: none;
   font-family: 'Prompt', sans-serif;
   padding:10px;
+}
+
+button:hover {
+  background: #7C0400;
+}
+
+#prev {
+  font-size: 50px;
+  opacity: 0.4;
+  position : absolute;
+  top : 130%;
+  left: 35%;
+  color: white;
+}
+
+#next {
+  font-size: 50px;
+  opacity: 0.4;
+  position : absolute;
+  top : 130%;
+  left: 63%;
+  color: white;
+}
+
+.rank1 {
+  font-size: 35px;
+  margin-left: 41%;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  color: #BC0000;
+  background: #fff;
+  border: 3px solid #BC0000;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  transition: all 0.3s;
+}
+
+.rank2 {
+  font-size: 25px;
+  margin-left: 41%;
+  top: 0;
+  width: 45px;
+  height: 45px;
+  color: #BC0000;
+  background: #fff;
+  border: 3px solid #BC0000;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  transition: all 0.3s;
+}
+
+.rank {
+  font-size: 20px;
+  margin-left: 41%;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  color: #BC0000;
+  background: #fff;
+  border: 3px solid #BC0000;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  transition: all 0.3s;
+}
+
+.jumbotron {
+  margin:0px 0px 0px 0px;
+  background: url(pic/bgpage.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-position: top  center;
+  height: 600px;
+  font-family: 'Chonburi', cursive;
+  color: #BC0000;
+  font-size: 7em;
+} 
+
+.jumbotron p {
+  position: absolute;
+  left: 10%;
+}
+
+.bottom-page{
+  background-color: #7C0400;
+  padding: 10px;
+  color: white;
 }

@@ -1,3 +1,10 @@
+@media (max-width: 500px) {
+article {
+margin: 0 2px;
+}
+}
+
+
 body {
   	background: black;
   	color: #fafafa;
@@ -12,14 +19,14 @@ body {
 }
 
 h3 {
-	background: #f72c2c;
+	background: #BC0000;
 	display: inline-block;
   	vertical-align: middle;
   	padding: 3px 5px;
 }
 
 .form-wrapper {
-  	background: #E3E3E3;
+  	background: #EA8787;
   	margin:1em auto;
   	padding: 0 1em;
   	max-width: 1100px;
@@ -47,7 +54,7 @@ form {
 }
 
 .form-item input:focus {
-  	border: 2px solid #7334BD;
+  	border: 2px solid #BC0000;
   	outline: none;
 }
 
@@ -72,7 +79,7 @@ label {
 }
 
 .button-panel .button {
-  	background: #BC0000;
+  	background: red;
   	border: none;
   	color: #fff;
   	cursor: pointer;
@@ -87,4 +94,32 @@ label {
 
 .button:hover {
   	background: #7C0400;
+}
+
+
+.jumbotron {
+  margin:0px 0px 0px 0px;
+  background: url(pic/bgpage.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-position: top  center;
+  height: 600px;
+  font-family: 'Chonburi', cursive;
+  color: #BC0000;
+  font-size: 7em;
+} 
+
+.jumbotron p {
+  position: absolute;
+  left: 10%;
+}
+
+nav{
+    background-color: #BC0000;
+}
+
+.bottom-page{
+  background-color: #7C0400;
+  padding: 20px;
+  color: white;
+  margin-top: 150px;
 }

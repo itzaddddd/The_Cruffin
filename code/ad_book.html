@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>The Cruffin</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -46,9 +46,43 @@
   		</div>
 	</nav>
 
+				<center><form>
+					<div class="form-item">
+						<h2>ค้นหาสินค้า</h2>
+		      			<input type="search" name="search"></input>
+		    		</div>
+		    		<div class="button-panel">
+		      			<input type="submit" class="button" value="ค้นหา"></input>
+		      		</div>	
+				</form>
+				<table id="search">
+					<colgroup>
+						<col width="80">
+						<col width="200">
+						<col width="100">
+						<col width="60">
+					</colgroup>
+					<tr>
+						<th>ID</th>
+						<th>ชื่อหนังสือ</th>
+						<th>ชื่อผู้แต่ง</th>
+						<th>จัดการ</th>
+					</tr>
+					<tr>
+						<td>1000</td>
+						<td>พิพิธภัณฑ์ หุ่น..หั่น..หัว</td>
+						<td>ภาคินัย</td>
+						<td>
+							<a href="#" data-toggle="modal" data-target="#book_delete">ลบ</a>
+							<a href="#" data-toggle="modal" data-target="#book_edit">แก้ไข</a>
+						</td>
+					</tr>
+				</table></center>
+				<h5>&nbsp;</h5>	
+
 	<div class="caption">ข้อมูลสินค้า</div>
-		<button class="book_add">เพิ่มสินค้า</button>
-		<center><table id="staff_all">
+		<button class="book_add" data-toggle="modal" data-target="#book_add">เพิ่มสินค้า</button>
+		<center><table id="book_all">
 			<tr>
 				<th>ลำดับ</th>
 				<th>ID</th>
@@ -72,30 +106,243 @@
 				<td>ภาคินัย</td>
 				<td>250.00</td>
 				<td>231123454234</td>
-				<td><a href="#">คลิก</a></td>
-				<td><a href="#">คลิก</a></td>
+				<td><a href="#" data-toggle="modal" data-target="#book_B_Tag">คลิก</a></td>
+				<td><a href="#" data-toggle="modal" data-target="#book_B_Story">คลิก</a></td>
 				<td>19/2/2017</td>
 				<td>3000</td>
 				<td>10000</td>
-				<td><a href="#">ลบ</a><br><a href="#">แก้ไข</a></td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>100000</td>
-				<td>พิพิธภัณฑ์ หุ่น..หั่น..หัว</td>
-				<td><img src="pic/cover/มิวเซียม.jpg"></td>
-				<td>ภาคินัย</td>
-				<td>250.00</td>
-				<td>231123454234</td>
-				<td><a href="#">คลิก</a></td>
-				<td><a href="#">คลิก</a></td>
-				<td>19/2/2017</td>
-				<td>3000</td>
-				<td>10000</td>
-				<td><a href="#">ลบ</a><br><a href="#">แก้ไข</a></td>
+				<td><a href="#" data-toggle="modal" data-target="#book_delete">ลบ</a><br><a href="#" data-toggle="modal" data-target="#book_edit">แก้ไข</a></td>
 			</tr>
 		</table></center>
 	</div>
+
+  <div class="modal" id="book_add">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h4 class="modal-title">เพิ่มสินค้า</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <form id="book_add">
+        <div class="modal-body">
+            <div class="form-group row">
+    					<label for="B_Name" class="col-sm-2 col-form-label">ชื่อหนังสือ</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="inputB_Name" placeholder="ชื่อหนังสือ">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="B_Cover" class="col-sm-2 col-form-label">ปกหนังสือ</label>
+    					<div class="col-sm-6">	
+    						<input type="file" class="form-control-file" id="inputB_Cover">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="B_Author" class="col-sm-2 col-form-label">ชื่อผู้แต่ง</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="inputB_Author" placeholder="ชื่อผู้แต่ง">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="B_Price" class="col-sm-2 col-form-label">ราคา</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="inputB_Price" placeholder="ราคา">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="B_ISBN" class="col-sm-2 col-form-label">ISBN</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="inputB_ISBN" placeholder="ISBN">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="B_Tag" class="col-sm-2 col-form-label">คำโปรย</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="inputB_Tag" placeholder="คำโปรย">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="B_Stroy" class="col-sm-2 col-form-label">เรื่องย่อ</label>
+    					<div class="col-sm-6">
+   		 					<textarea class="form-control" id="inputB_Story" rows="20" placeholder="เรื่องย่อ"></textarea>
+  						</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="B_Date" class="col-sm-2 col-form-label">วันที่ลงขาย</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="inputB_Date" placeholder="วันที่ลงขาย">
+    					</div>
+    				</div>
+        </div>
+
+        <div class="modal-footer">
+          <input type="submit" class="button" value="ยืนยัน" data-dismiss="modal"></input>
+        </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+    <div class="modal" id="book_edit">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h4 class="modal-title">แก้ไขข้อมูลสินค้า</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <form id="book_edit">
+        <div class="modal-body">
+         <div class="form-group row">
+    					<label for="B_Name" class="col-sm-2 col-form-label">ชื่อหนังสือ</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="inputB_Name" placeholder="ชื่อหนังสือ">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="B_Cover" class="col-sm-2 col-form-label">ปกหนังสือ</label>
+    					<div class="col-sm-6">	
+    						<input type="file" class="form-control-file" id="inputB_Cover">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="B_Author" class="col-sm-2 col-form-label">ชื่อผู้แต่ง</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="inputB_Author" placeholder="ชื่อผู้แต่ง">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="B_Price" class="col-sm-2 col-form-label">ราคา</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="inputB_Price" placeholder="ราคา">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="B_ISBN" class="col-sm-2 col-form-label">ISBN</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="inputB_ISBN" placeholder="ISBN">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="B_Tag" class="col-sm-2 col-form-label">คำโปรย</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="inputB_Tag" placeholder="คำโปรย">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="B_Stroy" class="col-sm-2 col-form-label">เรื่องย่อ</label>
+    					<div class="col-sm-6">
+   		 					<textarea class="form-control" id="inputB_Story" rows="20" placeholder="เรื่องย่อ"></textarea>
+  						</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="B_Date" class="col-sm-2 col-form-label">วันที่ลงขาย</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="inputB_Date" placeholder="วันที่ลงขาย">
+    					</div>
+    				</div>
+        </div>
+
+        <div class="modal-footer">
+          <input type="submit" class="button" value="ยืนยัน" data-dismiss="modal"></input>
+        </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+    <div class="modal" id="book_delete">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h4 class="modal-title">ยืนยันการลบข้อมูล</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-footer">
+            <div id="button_delete">
+  				<button data-dismiss="modal">ยืนยัน</button>
+  			</div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  	<div class="modal" id="book_detail1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h4 class="modal-title">ยืนยันการลบข้อมูล</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>	
+
+  	<div class="modal" id="book_B_Tag">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h4 class="modal-title">คำโปรย</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+        	<p id="B_Tag">ซีรีส์ชุด Six Scream ตอนที่ 6 ‘ฆ่า!’ เสียทองสูงท่วมตัว...อย่ายอมเสีย ‘หัว’ ตอนตาย!
+        	</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+   	<div class="modal" id="book_B_Story">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h4 class="modal-title">เรื่องย่อ</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+        	<p id="B_Story">
+        	Chapter 6 ‘MUSEUM พิพิธภัณฑ์ หุ่น/หั่น/หัว’
+			<br>ชื่อเสียงและเงินทองเป็นสองสิ่งที่ดึงดูดให้มนุษย์ทำอะไรได้โดยไม่คาดคิด
+			<br>อย่างเช่นการที่บุคคลซึ่งมีชื่อเสียงของเมืองไทย 
+			<br>ตกลงปลงใจให้พิพิธภัณฑ์สยามเวิลด์ปั้นหุ่นขี้ผึ้งของตัวเอง...หุ่นขี้ผึ้งของคนเป็น!
+			<br>ยามเก่าแก่ของพิพิธภัณฑ์เอ่ยปากห้าม ตามความเชื่อของคนโบราณ
+			<br>หุ่นขี้ผึ้งต้องสร้างจากคนตายเท่านั้น หากยังดื้อสร้างจากคนเป็น...อาเพศจะบังเกิด!
+			<br>‘มินจง’ นักธุรกิจชาวเกาหลีหาได้เชื่อในคำเตือนไม่ กลับสั่งให้ทุกอย่างดำเนินต่อไป
+			<br>โดยไม่เคยรู้ว่านั่นคือการนำ ‘ความหายนะ’ มาสู่พิพิธภัณฑ์แห่งนี้
+			<br>‘ชินวุฒิ’ มือขวาของมินจง ถูกมอบหมายให้ดูแลพิพิธภัณฑ์แทนเขา
+			<br>เรื่องราวสุดสยองเริ่มต้นขึ้น เมื่อความตายเข้ามาเคาะประตูเรียกตัวจริงของหุ่นทั้งเจ็ด
+			<br>วิธีเดียวที่จะหลุดพ้นจากบ่วงที่ก่อ...คือตัดคอหุ่นของตัวเองก่อนตาย
+			<br>แต่จะทำได้ไหม...ทำได้หรือเปล่า...ในเมื่อไม่มีใครเชื่อ
+			<br>พวกท้าทายเตรียมตัวถูกแล่เนื้อ...แล้วโดนทาเกลือจนแสบสะบัด
+			<br>บางสิ่งจะรู้ชัด...ก็ต่อเมื่อหัวถูกตัดไปแล้ว!
+			<br>. . . . . . . . . . . . . . . . . . . . . .
+			<br>‘หัว’ ของใคร...ของใครก็ห่วง
+			<br>‘หัว’ ใคร...ใครก็ต้องหวง...ห่วงใยรักใคร่หนักหนา
+			<br>อย่ามัวแต่หนี...โปรดจงก้มมองนาฬิกา
+			<br>เพราะเวลาทุกนาทีมี ‘ฆ่า’ โปรดช่วยกันรักษา...ก่อนตัว ’ตาย!’
+		</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>	
+	
 
 </body>
 </html>

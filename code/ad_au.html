@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>The Cruffin</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -46,8 +46,42 @@
   		</div>
 	</nav>
 
+				<center><form>
+					<div class="form-item">
+						<h2>ค้นหานักเขียน</h2>
+		      			<input type="search" name="search"></input>
+		    		</div>
+		    		<div class="button-panel">
+		      			<input type="submit" class="button" value="ค้นหา"></input>
+		      		</div>	
+				</form>
+				<table id="search">
+					<colgroup>
+						<col width="100">
+						<col width="100">
+						<col width="250">
+						<col width="60">
+					</colgroup>
+					<tr>
+						<th>ID</th>
+						<th>นามปากกา</th>
+						<th>ชื่อนักเขียน</th>
+						<th>จัดการ</th>
+					</tr>
+					<tr>
+						<td>1004</td>
+						<td>ภาคินัย</td>
+						<td>ภาคินัย กสิรักษ์</td>
+						<td>
+							<a href="#" data-toggle="modal" data-target="#author_delete">ลบ</a>
+							<a href="#" data-toggle="modal" data-target="#author_edit">แก้ไข</a>
+						</td>
+					</tr>
+				</table></center>
+				<h5>&nbsp;</h5>	
+
 	<div class="caption">ข้อมูลนักเขียน</div>
-		<button class="author_add">เพิ่มนักเขียน</button>
+		<button class="author_add" data-toggle="modal" data-target="#author_add">เพิ่มนักเขียน</button>
 		<center><table id="author_all">
 			<tr>
 				<th>ลำดับ</th>
@@ -70,18 +104,233 @@
 				<td>ภาคินัย กสิรักษ์</td>
 				<td>0943235454</td>
 				<td>paki_1994@gmail.com</td>
-				<td><a href="#">คลิก</a></td>
-				<td><a href="#">คลิก</a></td>
+				<td><a href="#" data-toggle="modal" data-target="#author_A_Int">คลิก</a></td>
+				<td><a href="#" data-toggle="modal" data-target="#author_book">คลิก</a></td>
 				<td>12/02/2013</td>
-				<td><a href="#">ลบ</a><br><a href="#">แก้ไข</a></td>
-				
-			</tr>
-			<tr>
-				
+				<td><a href="#"  data-toggle="modal" data-target="#author_delete">ลบ</a><br><a href="#" data-toggle="modal" data-target="#author_edit">แก้ไข</a></td>	
 			</tr>
 		</table></center>
 	</div>
 
+  <div class="modal" id="author_add">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h4 class="modal-title">เพิ่มผู้เขียน</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <form id="author_add">
+        <div class="modal-body">
+            <div class="form-group row">
+    					<label for="A_Name" class="col-sm-2 col-form-label">ชื่อนักเขียน</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="inputA_Name" placeholder="ชื่อนักเขียน">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="A_Pic" class="col-sm-2 col-form-label">รูปนักเขียน</label>
+    					<div class="col-sm-6">	
+    						<input type="file" class="form-control-file" id="inputA_Pic">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="A_Int" class="col-sm-2 col-form-label">บทสัมภาษณ์</label>
+    					<div class="col-sm-6">
+   		 					<textarea class="form-control" id="inputA_Int" rows="20" placeholder="บทสัมภาษณ์"></textarea>
+  						</div>
+    				</div>
+        </div>
+
+        <div class="modal-footer">
+          <input type="submit" class="button" value="ยืนยัน" data-dismiss="modal"></input>
+        </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+    <div class="modal" id="author_edit">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h4 class="modal-title">แก้ไขข้อมูลผู้เขียน</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <form id="author_edit">
+        <div class="modal-body">
+         <div class="form-group row">
+    					<label for="A_Name" class="col-sm-2 col-form-label">ชื่อนักเขียน</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="inputA_Name" placeholder="ชื่อนักเขียน">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="A_Pic" class="col-sm-2 col-form-label">รูปนักเขียน</label>
+    					<div class="col-sm-6">	
+    						<input type="file" class="form-control-file" id="inputA_Pic">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="A_Int" class="col-sm-2 col-form-label">บทสัมภาษณ์</label>
+    					<div class="col-sm-6">
+   		 					<textarea class="form-control" id="inputA_Int" rows="20" placeholder="บทสัมภาษณ์"></textarea>
+  						</div>
+    				</div>
+        </div>
+
+        <div class="modal-footer">
+          <input type="submit" class="button" value="ยืนยัน" data-dismiss="modal"></input>
+        </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+    <div class="modal" id="author_delete">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h4 class="modal-title">ยืนยันการลบข้อมูล</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-footer">
+            <div id="button_delete">
+  				<button data-dismiss="modal">ยืนยัน</button>
+  			</div>
+        </div>
+        
+      </div>
+    </div>
+  </div>	
+
+      <div class="modal" id="author_A_Int">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h4 class="modal-title">บทสัมภาษณ์</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+        	<p id="A_Int">
+					**แนะนำตัว**<br>
+					สวัสดีครับ ชื่อ ‘ภาคินัย กสิรักษ์’ ครับ ใช้นามปากกาว่า ‘ภาคินัย’<br>
+					กับ ‘แอมป์’ ครับผม ปัจจุบันก็เป็นนักเขียนอย่างเต็มตัว<br>
+					** ที่มาของการเป็นนักเขียน **<br>
+					อันที่จริงก็ชอบมาตั้งแต่สมัยเรียนแล้วครับ<br> 
+					แต่มาเริ่มแบบจริงจังออกเป็นเล่มเป็นเรื่องเป็นราวก็ตอนเรียนจบ<br>
+					แล้วครับ โดยการชักจูงของพี่ต้อง (บ.ก.)<br>
+					นับว่าภาคินัยเป็นนักเขียนรุ่นดึกดำบรรพ์เลยทีเดียว<br>
+					** ฝากถึง... **<br>
+					ฝากถึงคนอ่าน - - ติดตามอ่านกันต่อไปนะครับ เพราะมีคุณจึงมีเราครับ<br>
+					ฝากถึงคนอยากเขียน - - เก็บคำว่า ‘อยาก’ ทิ้งลงถังขยะ แล้วเริ่ม ‘ลงมือ’ ก่อนจะสายไปครับ<br>	
+				</p>
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+
+ <div class="modal" id="author_book">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h4 class="modal-title">ผลงาน</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+        	<div class="catalog">
+	      		<div class="booklist">
+					<article class="bookbox">
+	          			<a href="#"><img src="pic/cover/นางครวญ.jpg" class="bookpic"></a><br>
+	          			<h3>นางครวญ</h3><br>
+	        		</article>
+				</div>
+				<div class="booklist">
+					<article class="bookbox">
+	          			<a href="#"><img src="pic/cover/นางแค้น.jpg" class="bookpic"></a><br>
+	          			<h3>นางแค้น</h3><br>
+	        		</article>
+				</div>
+				<div class="booklist">
+					<article class="bookbox">
+	          			<a href="#"><img src="pic/cover/นางคุก.jpg" class="bookpic"></a><br>
+	          			<h3>นางคุก</h3><br>
+	        		</article>
+				</div>
+				<div class="booklist">
+					<article class="bookbox">
+	          			<a href="#"><img src="pic/cover/นางคอย.jpg" class="bookpic"></a><br>
+	          			<h3>นางคอย</h3><br>
+	        		</article>
+				</div>
+				<div class="booklist">
+					<article class="bookbox">
+	          			<a href="#"><img src="pic/cover/บันรากุ.jpg" class="bookpic"></a><br>
+	          			<h3>บันรากุ...หน้ากากฆาตกรรม</h3><br>
+	        		</article>
+				</div>
+				<div class="booklist">
+					<article class="bookbox">
+	          			<a href="#"><img src="pic/cover/พอร์ชเลน.jpg" class="bookpic"></a><br>
+	          			<h3>พอร์ชเลน...ตุ๊กตาอาฆาต</h3><br>
+	        		</article>
+				</div>
+				<div class="booklist">
+					<article class="bookbox">
+	          			<a href="#"><img src="pic/cover/สาปอัปสรา.jpg" class="bookpic"></a><br>
+	          			<h3>สาปอัปสรา</h3><br>
+	        		</article>
+				</div>
+				<div class="booklist">
+					<article class="bookbox">
+	          			<a href="#"><img src="pic/cover/สวนสนุกแดนนรก.jpg" class="bookpic"></a><br>
+	          			<h3>สวนสนุกแดนนรก</h3><br>
+	        		</article>
+				</div>
+				<div class="booklist">
+					<article class="bookbox">
+	          			<a href="#"><img src="pic/cover/น้ำสังข์อาบศพ.jpg" class="bookpic"></a><br>
+	          			<h3>น้ำสังข์อาบศพ</h3><br>
+	        		</article>
+				</div>
+				<div class="booklist">
+					<article class="bookbox">
+	          			<a href="#"><img src="pic/cover/มิวเซียม.jpg" class="bookpic"></a><br>
+	          			<h3>พิพิธภัณฑ์ หุ่น-หั่น-หัว</h3><br>
+	        		</article>
+				</div>
+				<div class="booklist">
+					<article class="bookbox">
+	          			<a href="#"><img src="pic/cover/บ่วงสไบ.jpg" class="bookpic"></a><br>
+	          			<h3>บ่วงสไบ</h3><br>
+	        		</article>
+				</div>
+				<div class="booklist">
+					<article class="bookbox">
+	          			<a href="#"><img src="pic/cover/ดารันดา.jpg" class="bookpic"></a><br>
+	          			<h3>ดารันดา</h3><br>
+	        		</article>
+				</div>
+    		</div>
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

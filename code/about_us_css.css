@@ -1,4 +1,7 @@
-div{
+@media (max-width: 500px) {
+article {
+margin: 0 2px;
+}
 }
 
 body{
@@ -48,7 +51,7 @@ li{
 }
 
 #cart{
-	background-color: #182589;
+	background-color: #BC0000;
 	margin-right: 30px;
 	color: white;
 }
@@ -89,12 +92,12 @@ li{
 }
 
 #login{
-	background-color: #5e3500;
+	background-color: #BC0000;
 	color: white;
 }
 
 #regis{
-	background-color: #5e3500;
+	background-color: #BC0000;
 	color: white;
 }
 
@@ -114,11 +117,15 @@ li{
 }
 
 .bottom-page{
-	background-color: #960707;
+	background-color: #7C0400;
 	padding: 10px;
-
+	color: white;
 }
 
 #pcy{
 	padding-bottom: 120px;
+}
+
+embed{
+	opacity: 0;
 }

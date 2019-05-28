@@ -1,3 +1,9 @@
+@media (max-width: 500px) {
+article {
+margin: 0 2px;
+}
+}
+
 body {
   	background: black;
   	color: #5e5e5e;
@@ -35,7 +41,7 @@ form {
 }
 
 .form-item input:focus {
-  	border: 2px solid #7334BD;
+  	border: 2px solid #700E0A;
   	outline: none;
 }
 
@@ -78,4 +84,31 @@ form {
 
 .form-footer a:hover {
   border-bottom: 1px solid #fafafa;
+}
+
+.jumbotron {
+  margin:0px 0px 0px 0px;
+  background: url(pic/bgpage.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-position: top  center;
+  height: 600px;
+  font-family: 'Chonburi', cursive;
+  color: #BC0000;
+  font-size: 7em;
+} 
+
+.jumbotron p {
+  position: absolute;
+  left: 10%;
+}
+
+nav{
+    background-color: #BC0000;
+}
+
+.bottom-page{
+  background-color: #7C0400;
+  padding: 10px;
+  color: white;
+  margin-top: 150px;
 }

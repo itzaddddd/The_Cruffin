@@ -1,3 +1,9 @@
+@media (max-width: 500px) {
+article {
+margin: 0 2px;
+}
+}
+
 body {
   background: black;
   color: #fafafa;
@@ -12,7 +18,7 @@ body {
 }
 
 h3 {
-  background: #f72c2c;
+  background: #BC0000;
 	display: inline-block;
   vertical-align: middle;
   padding: 3px 5px;
@@ -25,7 +31,7 @@ h4 {
 }
 
 table {
-  background: #E3E3E3;
+  background: #EA9A9A;
   width: 101%;
   margin:1em auto;
   max-width: 1140px;
@@ -47,7 +53,7 @@ td {
 }
 
 .form-wrapper {
-  background: #E3E3E3;
+  background: #EA9A9A;
   margin:1em auto;
   padding: 0 1em;
   max-width: 1100px;
@@ -86,7 +92,7 @@ span.detail {
 }
 
 .button-panel .button {
-  background: #BC0000;
+  background: #9B0000;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -100,5 +106,32 @@ span.detail {
 }
 
 .button:hover {
-  background: #7C0400;
+  background: #700E0A;
+}
+
+.jumbotron {
+  margin:0px 0px 0px 0px;
+  background: url(pic/bgpage.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-position: top  center;
+  height: 600px;
+  font-family: 'Chonburi', cursive;
+  color: #BC0000;
+  font-size: 7em;
+} 
+
+.jumbotron p {
+  position: absolute;
+  left: 10%;
+}
+
+nav{
+    background-color: #BC0000;
+}
+
+.bottom-page{
+  background-color: #7C0400;
+  padding: 20px;
+  color: white;
+  margin-top: 150px;
 }

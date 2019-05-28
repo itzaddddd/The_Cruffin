@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Cruffin - ค้นหา</title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="search_css.css">
+	<link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Chonburi&display=swap" rel="stylesheet">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+	  <a class="navbar-brand" href="#">The_Curffin</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	    <ul class="navbar-nav">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="#">เกี่ยวกับเรา<span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">หนังสือ</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">นักเขียน</a>
+	      </li>
+	      <li class="nav-item">
+	      	<a class="nav-link" href="#">ค้นหา</a>
+	      </li>
+	      <li class="nav-item">
+	      	<a class="nav-link" href="#">ตะกร้าสินค้า</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<div class="jumbotron jumbotron-fluid">
+	  <div class="container">
+	    <center><img src="pic/logo.png" width="300" height="mx-auto" margin="0"></center>
+	    <p><b>ค้นหา</b></p>
+	  </div>
+	</div>
+
+	<div class="form-wrapper-main">
+		<h1>ค้นหา</h1>
+		<div class="form-wrapper">
+		<form>
+			<h2>ค้นหาจาก</h2>
+			<select>
+				<option>ชื่อหนังสือ</option>
+				<option>ชื่อผู้แต่ง</option>
+			</select>
+			<div class="form-item">
+				<h2>คำค้น</h2>
+      			<input type="search" name="search"></input>
+    		</div>
+    		<div class="button-panel">
+      			<input type="submit" class="button" value="ค้นหา"></input>
+      		</div>	
+		</form>
+		</div>
+		<h5>&nbsp;</h5>
+		<h1>ผลค้นหา</h1>
+		<div class="catalog">
+      		<div class="booklist">
+				<article class="bookbox">
+          			<a href="#"><img src="https://www.sofapublishing.com/bookstore/api/book/cover/SF_0000091/" class="bookpic"></a><br>
+          			<h3>นางครวญ</h3><br>
+          			<button class="addtocart"><i class="fas fa-shopping-cart"></i>เพิ่มในตระกร้าสินค้า</button>
+        		</article>
+			</div>
+			<div class="booklist">
+				<article class="bookbox">
+          			<a href="#"><img src="https://www.sofapublishing.com/bookstore/api/book/cover/SF_0000101/" class="bookpic"></a><br>
+          			<h3>นางแค้น</h3><br>
+          			<button class="addtocart"><i class="fas fa-shopping-cart"></i>เพิ่มในตระกร้าสินค้า</button>
+        		</article>
+			</div>
+			<div class="booklist">
+				<article class="bookbox">
+          			<a href="#"><img src="https://www.sofapublishing.com/bookstore/api/book/cover/SF_0000108/" class="bookpic"></a><br>
+          			<h3>นางคุก</h3><br>
+          			<button class="addtocart"><i class="fas fa-shopping-cart"></i>เพิ่มในตระกร้าสินค้า</button>
+        		</article>
+			</div>
+			<div class="booklist">
+				<article class="bookbox">
+          			<a href="#"><img src="https://www.sofapublishing.com/bookstore/api/book/cover/SF_0000125/" class="bookpic"></a><br>
+          			<h3>นางคอย</h3><br>
+          			<button class="addtocart"><i class="fas fa-shopping-cart"></i>เพิ่มในตระกร้าสินค้า</button>
+        		</article>
+			</div>
+			<div class="booklist">
+				<article class="bookbox">
+          			<a href="#"><img src="https://www.sofapublishing.com/bookstore/api/book/cover/SF_0000119/" class="bookpic"></a><br>
+          			<h3>วังนางโหง</h3><br>
+          			<button class="addtocart"><i class="fas fa-shopping-cart"></i>เพิ่มในตระกร้าสินค้า</button>
+        		</article>
+			</div>
+			<div class="booklist">
+				<article class="bookbox">
+          			<a href="#"><img src="https://www.sofapublishing.com/bookstore/api/book/cover/SF_0000197/" class="bookpic"></a><br>
+          			<h3>สาวนางพราย</h3><br>
+          			<button class="addtocart"><i class="fas fa-shopping-cart"></i>เพิ่มในตระกร้าสินค้า</button>
+        		</article>
+			</div>
+    	</div>
+	</div>
+
+<div class="bottom-page">
+    <div class="container">
+        <div class="row">
+            <div id="about_contact">
+             </div>
+        </div>
+    <div class="row">
+        <div class="col-md-4">
+            <p>
+                บริษัท เดอะครัฟฟินพับบลิชชิง จำกัด<br>
+                <br>
+                126 ถนนประชาอุทิศ แขวงบางมด<br>
+                เขตทุ่งครุ กรุงเทพฯ 10140
+            </p>    
+        </div>
+        <div class="col-md-4">
+            <p>
+                โทร  : 0-2470-8000<br>
+                <br>
+                อีเมล : The_Cruffin@hotmail.com
+            </p>
+        </div>
+        <div class="col-md-4" id="link-menu">    
+                    <div id="bt-about_us">เกี่ยวกับเรา</div>
+                    <div id="bt-book">หนังสือ</div>
+                    <div id="bt-author">นักเขียน</div>
+                    <div id="bt-search">ค้นหา</div>
+        </div>
+    </div>
+        
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,23 +1,29 @@
+@media (max-width: 500px) {
+article {
+margin: 0 2px;
+}
+}
+
 body{
 	background: black;
-	text-align: center;
 	font-family: 'Prompt', sans-serif;
 	color: white;
 
 }
 
 .row{
-	margin: 20px;
+	margin: 60px;
 }
 
 .book_title{
-	background-color: brown;
+	background-color: #BC0000;
 	font-size: 20px;
 	padding: 10px;
+
 }
 
 .add_to_cart{
-	background-color: blue;
+	background-color: red;
 	color: white;
 	border: none;
 	padding: 10px;
@@ -44,3 +50,37 @@ body{
 	margin-top: 20px;
 }
 
+.price{
+	margin: 20px;
+}
+
+.jumbotron {
+  margin:0px 0px 0px 0px;
+  background: url(pic/bgpage.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-position: top  center;
+  height: 600px;
+  font-family: 'Chonburi', cursive;
+  color: #BC0000;
+  font-size: 7em;
+}  
+
+.jumbotron p {
+  position: absolute;
+  left: 10%;
+}
+
+nav{
+	background-color: #BC0000;
+}
+
+button:hover {
+    background: #7C0400;
+}
+
+.bottom-page{
+	background-color: #7C0400;
+	padding: 10px;
+	color: white;
+	margin-top: 100px;
+}
