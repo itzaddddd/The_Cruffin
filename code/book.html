@@ -2,13 +2,14 @@
 <html>
 <head>
 
-	<title></title>
+	<title>The Cruffin - หนังสือ</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="book_js.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-	<!-- <link rel="stylesheet" type="text/css" href="book_css.css"> -->
 	<link rel="stylesheet" type="text/css" href="book_css.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
@@ -16,6 +17,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet">
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
@@ -44,6 +46,12 @@
   </div>
 </nav>
 
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <center><img src="pic/logo.png" width="300" height="mx-auto" margin="0"></center>
+    <p><b>หนังสือ</b></p>
+  </div>
+</div>
 
 	<div class="container">
 		<div class="row">
@@ -84,31 +92,34 @@
       				</div>
     	</div>
 	</main>
-	<!--<div class="buttons">
-      		<button id="prev">Prev</button>
-      		<button id="next">Next</button>
-    	</div>-->
+<div class="fas fa-chevron-left" id="prev"></div>
+<div class="fas fa-chevron-right" id="next"></div>
 
     <div class="container">
 		<div class="row">
 			<div class="product_title col-md-12" id="product_pop">
 				นิยายยอดนิยม
 			</div>
-			<div class="col-md-12">
+			<div class="col-md-12 col-">
 				<center><table>
 					<tr id="pop1-2">
-						<td id="pop1"><img src="pic/cover/สาปสังคีต.jpg"></td>
+						<td id="pop1"><div class="rank1">1</div>
+							<img src="pic/cover/สาปสังคีต.jpg"></td>
 						<td class="blank_pop"></td>
-						<td id="pop2"><img src="pic/cover/เนตรมรณา.jpg"></td>
+						<td id="pop2"><div class="rank2">2</div>
+							<img src="pic/cover/เนตรมรณา.jpg"></td>
 					</tr>
 				</table></center>
 				<center><table>
 					<tr id="pop3-5">
-						<td id="pop3"><img src="pic/cover/ตายไม่หลับ.jpg"></td>
+						<td id="pop3"><div class="rank">3</div>
+							<img src="pic/cover/ตายไม่หลับ.jpg"></td>
 						<td class="blank_pop"></td>
-						<td id="pop4"><img src="pic/cover/มิวเซียม.jpg"></td>
+						<td id="pop4"><div class="rank">4</div>
+							<img src="pic/cover/มิวเซียม.jpg"></td>
 						<td class="blank_pop"></td>
-						<td id="pop4"><img src="pic/cover/ลิลิตเมืองมาร.jpg"></td>
+						<td id="pop4"><div class="rank">5</div>
+							<img src="pic/cover/ลิลิตเมืองมาร.jpg"></td>
 					</tr>
 				</table></center>
 			</div>
@@ -122,7 +133,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="product_all col-md-12">
+			<div class="product_all col-md-4 col-sm-6">
 				<center>
 					<table>
 						<tr>
@@ -215,6 +226,39 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="bottom-page">
+    <div class="container">
+        <div class="row">
+            <div id="about_contact">
+             </div>
+        </div>
+    <div class="row">
+        <div class="col-md-4">
+            <p>
+                บริษัท เดอะครัฟฟินพับบลิชชิง จำกัด<br>
+                <br>
+                126 ถนนประชาอุทิศ แขวงบางมด<br>
+                เขตทุ่งครุ กรุงเทพฯ 10140
+            </p>    
+        </div>
+        <div class="col-md-4">
+            <p>
+                โทร  : 0-2470-8000<br>
+                <br>
+                อีเมล : The_Cruffin@hotmail.com
+            </p>
+        </div>
+        <div class="col-md-4" id="link-menu">    
+                    <div id="bt-about_us">เกี่ยวกับเรา</div>
+                    <div id="bt-book">หนังสือ</div>
+                    <div id="bt-author">นักเขียน</div>
+                    <div id="bt-search">ค้นหา</div>
+        </div>
+    </div>
+        
+    </div>
+</div>
 
 </body>
 </html>

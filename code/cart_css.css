@@ -1,3 +1,9 @@
+@media (max-width: 500px) {
+article {
+margin: 0 2px;
+}
+}
+
 body {
     background: black;
     color: #fafafa;
@@ -5,14 +11,15 @@ body {
 }
 
 table {
-    background: #E3E3E3;
+    background: #EA9A9A;
     width: 101%;
     margin:1em auto;
     max-width: 1140px;
+    margin-top: 80px;
 }
 
 th {
-    background: #081B82;
+    background: #BC0000;
     color: #fafafa;
     font-size: 1em;
     padding-top: 10px;
@@ -40,7 +47,7 @@ td {
 }
 
 .button-panel .button {
-    background: #24D10E;
+    background: red;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -54,7 +61,7 @@ td {
 }
 
 .button:hover {
-    background: #21AA0F;
+    background: #7C0400;
 }
 
 .button-panel-b {
@@ -70,7 +77,7 @@ td {
 }
 
 .button-panel-b .button {
-    background: #30B3C9;
+    background: #9B0000;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -81,16 +88,45 @@ td {
     text-align: center;
     text-transform: uppercase;
     width: 50%;
+    margin-bottom: 100px;
 }
 
 .button-panel-b .button:hover {
-    background: #2C8E9D;
+    background: #700E0A;
 }
 
 .quantity {
     width: 33px;
     height: 22px;
-    background: #E3E3E3;
+    background: #EA9A9A;
     color: black;
     text-align: center;
+    border: none;
+}
+
+
+.jumbotron {
+  margin:0px 0px 0px 0px;
+  background: url(pic/bgpage.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-position: top  center;
+  height: 600px;
+  font-family: 'Chonburi', cursive;
+  color: #BC0000;
+  font-size: 7em;
+} 
+
+.jumbotron p {
+  position: absolute;
+  left: 10%;
+}
+
+nav{
+    background-color: #BC0000;
+}
+
+.bottom-page{
+    background-color: #7C0400;
+    padding: 20px;
+    color: white;
 }
